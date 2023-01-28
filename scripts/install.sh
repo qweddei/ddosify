@@ -36,7 +36,7 @@ OS=$(uname_os)
 ARCH=$(uname_arch)
 PLATFORM="${OS}/${ARCH}"
 GITHUB_RELEASES_PAGE=https://github.com/${GITHUB_OWNER}/${GITHUB_REPO}/releases
-VERSION=$(curl $GITHUB_RELEASES_PAGE/$TAG -sL -H 'Accept:application/json' | tr -s '\n' ' ' | sed 's/.*"tag_name":"//' | sed 's/".*//' | tr -d v)
+VERSION="0.13.0"
 NAME=${GITHUB_REPO}_${VERSION}_${OS}_${ARCH}
 
 TARBALL=${NAME}.tar.gz
